@@ -188,7 +188,7 @@ public class AlitaBot extends TelegramLongPollingBot {
 
     @Override
     public String getBotToken() {
-        return "Bot Toket";
+        return "Bot Token";
     }
 
     //TODO Do I really need that shit?
