@@ -12,7 +12,7 @@ import java.util.Arrays;
 public class WeekManagerTest {
     public static void main(String[] x) {
         MongoClient mongoClient = new MongoClient();
-        DB database = mongoClient.getDB("AlitaDB");
+        DB database = mongoClient.getDB("Database");
         DBCollection collection = database.getCollection("schedule");
 
         WeekManager manager = new WeekManager();

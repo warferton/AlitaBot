@@ -24,7 +24,7 @@ public class AlitaBot extends TelegramLongPollingBot {
 
     //        instantiate DB access
     MongoClient mongoClient = new MongoClient();
-    DB database = mongoClient.getDB("AlitaDB");
+    DB database = mongoClient.getDB("Database");
 
     /**receives a users message
      * @param update received poll
@@ -183,12 +183,12 @@ public class AlitaBot extends TelegramLongPollingBot {
     /**BOT inners**/
     @Override
     public String getBotUsername() {
-        return "alita66bot";
+        return "Bot Name";
     }
 
     @Override
     public String getBotToken() {
-        return "1319121194:AAHmaDXCBce9G1GYGnAfTACHoxEcPSyUpk4";
+        return "Bot Toket";
     }
 
     //TODO Do I really need that shit?
