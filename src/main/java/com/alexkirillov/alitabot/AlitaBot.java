@@ -191,7 +191,7 @@ public class AlitaBot extends TelegramLongPollingBot {
         return "Bot Token";
     }
 
-    //TODO Do I really need that shit?
+    //TODO Do I really need that ?
     public synchronized void setDeployButtons(SendMessage sendMessage){
         //keyboard mockup
         ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
