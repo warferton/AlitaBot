@@ -5,6 +5,7 @@ import com.mongodb.BasicDBObject;
 import com.mongodb.DBObject;
 
 import java.time.Duration;
+import java.util.List;
 
 
 public class AlitaAppointment {
@@ -12,12 +13,15 @@ public class AlitaAppointment {
     private final String service_name;
     private final Duration estimated_time;
     private final short service_id;
+    private  final List<String> employees;
 
-    public AlitaAppointment(double price, String service_name, Duration estimated_time, short service_id) {
+    public AlitaAppointment(double price, String service_name, Duration estimated_time, short service_id,
+                            List<String> employees) {
         this.price = price;
         this.service_name = service_name;
         this.estimated_time = estimated_time;
         this.service_id = service_id;
+        this.employees = employees;
     }
 
     public double getPrice() {
@@ -39,6 +43,10 @@ public class AlitaAppointment {
         return service_id;
     }
 
+    public List<String> getEmployeeList(){
+        return employees;
+    }
+
     @Override
     public String toString() {
         return service_name+"\nЦена: "+price+"\nПриблизительная длительность: "+estimated_time.toMinutes()+" минут.\n\n";
@@ -46,6 +54,7 @@ public class AlitaAppointment {
     
     public DBObject toDBObject(AlitaAppointment alitaService){
         return new BasicDBObject("serviceId", service_id).append("serviceName", service_name)
-                                .append("price", price).append("estematedTime", estimated_time.toMinutes());
+                                .append("price", price).append("estematedTime", estimated_time.toMinutes())
+                                .append("employees", employees);
     }
 }

@@ -11,6 +11,13 @@ public class Client {
     private String last_name;
     private UUID user_id;
 
+    public Client(String user_name, String first_name, String last_name, UUID user_id) {
+        this.user_name = user_name;
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.user_id = user_id;
+    }
+
     public String getUserName() {
         return user_name;
     }
@@ -40,13 +47,6 @@ public class Client {
     }
 
     public void setUserId(UUID user_id) {
-        this.user_id = user_id;
-    }
-
-    public Client(String user_name, String first_name, String last_name, UUID user_id) {
-        this.user_name = user_name;
-        this.first_name = first_name;
-        this.last_name = last_name;
         this.user_id = user_id;
     }
 

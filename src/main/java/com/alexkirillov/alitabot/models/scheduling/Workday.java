@@ -20,6 +20,12 @@ public class Workday {
         appointment_list = new LinkedList<AlitaAppointment>();
     }
 
+    public Workday(LocalDate date){
+        this.date = date;
+        workday_time = Duration.of(12, ChronoUnit.HOURS);
+        appointment_list = new LinkedList<AlitaAppointment>();
+    }
+
     public Workday(LocalDate date, Duration workday_time, LinkedList<AlitaAppointment> appointment_list) {
         this.date = date;
         this.workday_time = workday_time;
@@ -29,7 +35,7 @@ public class Workday {
     //workday method controls
 
     /**
-     * Adds an <i>AlitaAppointment</i> for a current <i>Workday<i/>.
+     * Adds an <i>AlitaAppointment</i> to a current <i>Workday<i/>.
      * First check if the appointment fits the current existing schedule.
      * If yes - returns 1 and adds the appointment to the
      * appointment list.
@@ -110,8 +116,8 @@ public class Workday {
                 '}';
     }
 
-    public DBObject toDBObject(){
+    public DBObject toDBObject(int day_num){
         return new BasicDBObject("date", date.toString()).append("worktime", workday_time.toString())
-                                .append("appointments",appointment_list.toString());
+                                .append("appointments",appointment_list.toString()).append("dayNo", day_num);
     }
 }
