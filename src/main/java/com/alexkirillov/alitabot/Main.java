@@ -13,8 +13,9 @@ public class Main {
         try{
             AlitaBot bot = new AlitaBot();
             telegramBotsApi.registerBot(bot);
-            WeekManager week_manager = new WeekManager();
-            week_manager.weekUpdate();
+
+            //initialize daily update function
+            bot.week_manager.weekUpdate();
         } catch (TelegramApiException e) {
             e.printStackTrace();
         }

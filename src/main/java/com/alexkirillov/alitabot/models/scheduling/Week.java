@@ -144,16 +144,16 @@ public class Week {
                     e.printStackTrace();
                 }
     }
-    public DBObject toDBObject(int week_num){
-        return new BasicDBObject("Day1",day_1.toDBObject())
-                                .append("Day2", day_2.toDBObject())
-                                .append("Day3", day_3.toDBObject())
-                                .append("Day4", day_4.toDBObject())
-                                .append("Day5", day_5.toDBObject())
-                                .append("Day6", day_6.toDBObject())
-                                .append("Day7", day_7.toDBObject())
-                                .append("weekNo", week_num);
-    }
+//    public DBObject toDBObject(int week_num){
+//        return new BasicDBObject("Day1",day_1.toDBObject())
+//                                .append("Day2", day_2.toDBObject())
+//                                .append("Day3", day_3.toDBObject())
+//                                .append("Day4", day_4.toDBObject())
+//                                .append("Day5", day_5.toDBObject())
+//                                .append("Day6", day_6.toDBObject())
+//                                .append("Day7", day_7.toDBObject())
+//                                .append("weekNo", week_num);
+//    }
 
     @Override
     public String toString() {
