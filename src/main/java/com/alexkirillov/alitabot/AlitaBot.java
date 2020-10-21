@@ -206,12 +206,12 @@ public class AlitaBot extends TelegramLongPollingBot {
     //BOT inners
     @Override
     public String getBotUsername() {
-        return "Bot Name";
+        return "alita66bot";
     }
 
     @Override
     public String getBotToken() {
-        return "Bot Token";
+        return "1319121194:AAHmaDXCBce9G1GYGnAfTACHoxEcPSyUpk4";
     }
 
 }
